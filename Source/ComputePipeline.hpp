@@ -14,6 +14,8 @@ class ActionObject;
 class ComputePipeline {
 public:
     ComputePipeline();
+    
+    ~ComputePipeline();
 
     /// Submit URLs to process in the pipeline
     /// @param url: URL to process (can be file, http(s), or a bundle URI)

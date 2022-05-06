@@ -10,6 +10,13 @@ ComputePipeline::ComputePipeline()
 {
 }
 
+ComputePipeline::~ComputePipeline() {
+    if (mThread) {
+        mThread->detach();
+        delete mThread;
+    }
+}
+
 std::future<std::shared_ptr<ActionObject>> ComputePipeline::addTask(const std::string& url) {
     std::shared_ptr<PipelineTask> pipelineTask(new PipelineTask(url, mActionFactory));
     
