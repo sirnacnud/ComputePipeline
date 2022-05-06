@@ -1,6 +1,9 @@
 # Compute Pipeline
 This project is a homework assignment for a job interview.
 
+## Compiling
+Use cmake to compile the project.
+
 ## Usage
 The `ComputePipeline` object handles processing the URLs you supply to it. You will get a `std::future<ActionObject>` back which can be used to retrive the final `ActionObject` for your URL. 
 
